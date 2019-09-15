@@ -1,9 +1,15 @@
 import React from 'react';
 
-function Title(){
-    return(
-        <h1>I'm title</h1>
+class Title extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>I'm title</h1>
+            </div>
 
-    );
+
+        );
+    }
+
 }
 export default Title;
