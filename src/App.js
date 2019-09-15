@@ -42,23 +42,32 @@ class App extends React.Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Please enter the correct"
+        error: "Please fill the correct details"
       });
     }
 
   }
   render() {
     return (
-      <div>
-        <Title />
-        <Form weather={this.getWeather} />
-        <Weather temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error} />
-
+      <div className="wrapper">
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-5 title-container">
+                <Title />
+              </div>
+              <div className="col-xs-7 form-container">
+                <Form weather={this.getWeather} />
+                <Weather temperature={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
 

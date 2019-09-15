@@ -3,12 +3,25 @@ import React from 'react';
 class Weather extends React.Component {
     render() {
         return (
-            <div>{this.props.city && <p> temperature : {this.props.city}</p>}
-                {this.props.country && <p> country :  {this.props.country}</p>}
-                {this.props.temperature && <p> Temp : {this.props.temperature}</p>}
-                {this.props.humidity && <p>Humidity : {this.props.humidity}</p>}
-                {this.props.description && <p>description : {this.props.description}</p>}
-                {this.props.error && <p>{this.props.error}</p>}
+            <div className="weather__info">
+                {
+                    this.props.city && <p className="weather__key"> temperature : <span>{this.props.city}</span></p>
+                }
+                {
+                    this.props.country && <p className="weather__key"> country : <span> {this.props.country}</span></p>
+                }
+                {
+                    this.props.temperature && <p className="weather__key"> Temp : <span>{this.props.temperature}</span></p>
+                }
+                {
+                    this.props.humidity && <p className="weather__key">Humidity : <span>{this.props.humidity}</span></p>
+                }
+                {
+                    this.props.description && <p className="weather__key">description : <span>{this.props.description}</span></p>
+                }
+                {
+                    this.props.error && <p className="weather__key"><span>{this.props.error}</span></p>
+                }
 
 
             </div>
